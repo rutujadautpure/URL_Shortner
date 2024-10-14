@@ -14,13 +14,15 @@ const {restrictToLoggedInUser,checkAuth} = require("./middlewares/auth")
 
 const userRouter = require("./routes/user");
 
-mongoose.connect("mongodb://localhost:27017/url_shortner")
-.then(()=>{
+// mongoose.connect("mongodb://localhost:27017/url_shortner")
+require('dotenv').config();  
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
     console.log("MongoDB Connected!!");
-})
-.catch((err)=>{
-  console.log(err);
-})
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 app.set("view engine","ejs");
 app.set("views",path.resolve("./views"));
