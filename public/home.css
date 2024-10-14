@@ -1,0 +1,105 @@
+*{
+    margin :0px;
+    padding :0px;
+}
+h1{
+    text-align: center;
+    color:rgb(0, 71, 71);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 2%;
+}
+body{
+    background-color:rgba(211, 242, 242, 0.667);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    /* align-items: center; */
+
+}
+
+form{
+    background-color:white;
+    height:300px;
+    width:500px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 5% 35% ;
+    box-shadow: 0 4px 8px rgb(74, 87, 87);
+    border-radius: 8px;
+}
+
+#url{
+    background-color: rgb(255, 255, 255);
+    height:40px;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid #8e9e9ea2;
+    text-align: center;
+    font-weight:400;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button{
+    background-color: rgba(16, 102, 102, 0.763);;
+    height:40px;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    color:white;
+    font-weight:400;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#ready_shortid{
+    font-weight:400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+    margin-left: 35%;
+    margin-bottom: 5%;
+    font-size: larger;
+}
+
+#presented_shortid{
+    color:rgb(188, 5, 5);
+    text-decoration: underline;
+}
+
+#error1{
+    color:rgb(188, 5, 5);
+    font-weight:400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+    margin-left: 35%;
+    margin-bottom: 5%;
+    font-size: larger;
+}
+
+td{
+    font-weight:200;
+    font-size:medium;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+table {
+    width: 100%; /* Optional: Make table width 100% */
+    border-collapse: separate; /*Use separate border model */
+    border-spacing: 15px; /* Space between table columns */
+}
+
+th{
+    font-weight:bolder;
+    font-size:larger;
+    color: rgb(2, 2, 154);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+td {
+    padding: 8px; /* Increase padding inside table cells */
+    /*border: 1px solid rgba(68, 95, 95, 0.427);; /* Optional: Add border to table cells*/
+}
