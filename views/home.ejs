@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL_Shortner</title>
+    <link rel="stylesheet" href="/home.css">
+    <style>
+        /* Add this CSS for styling the logout button */
+        #logout-button {
+            position: absolute; /* Position it at the top right */
+            top: 20px; /* Adjust the top position */
+            right: 20px; /* Adjust the right position */
+            padding: 10px 15px; /* Button padding */
+            background-color: #f44336; /* Red background */
+            color: white; /* White text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            text-decoration: none; /* Remove underline */
+        }
+        
+        #logout-button:hover {
+            background-color: #d32f2f; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>URL Shortner</h1>  
+    
+    <!-- Logout Button -->
+    <a href="/user/logout" id="logout-button">Logout</a> 
+
+    <form id="form1" method="POST" action="/url">
+        <input type="url" id="url" name="url" placeholder="https://example.com" required>
+        <button type="submit">Shorten</button>
+    </form>
+    
+    <% if (locals.id) { %>
+        <p id="ready_shortid">Your shorten id is <span id="presented_shortid">http://127.0.0.1:3000/url/<%= id %></span></p>
+    <% } %>
+    
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>ShortId</th>
+                    <th>Redirect URL</th>
+                    <th>Total Clicks</th>
+                </tr>
+            </thead>
+            <tbody>
+               <% if (locals.urls) { %>
+                    <% urls.forEach((url, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= url.shortId %></td>
+                            <td><%= url.redirectURL %></td>
+                            <td><%= url.visitHistory.length %></td>
+                        </tr>
+                    <% }) %>
+               <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
